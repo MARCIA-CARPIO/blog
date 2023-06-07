@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:rgb(156, 196, 169);">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #temporizador{
+            font-size:40pt;
+            margin:70px;
+            width:50px;
+            color: rgb(212, 10, 209); 
+            text-align: center;
+            font-family: Georgia, 'arial', Times, serif;
+    
+        }
+        #cronometro{
+            font-size:40pt;
+            margin:70px;
+            width:50px;
+            color: rgb(170, 0, 105); 
+            text-align: center;
+            font-family: Georgia, 'arial', Times, serif;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div></div>
+    <p id="temporizador"></p>
+    <script>
+        var segundos = 20;
+        function actualizarTiempo(){
+            document.getElementById("temporizador").innerHTML = segundos+" Segundo";
+            if (segundos==0){
+                document.getElementById("temporizador").innerHTML = "termino";
+            }else{
+                segundos--;
+                setTimeout("actualizarTiempo()",1000);
+            }
+        }
+    </script>
+    </div>
+    <div>
+        <p id="cronometro"></p>
+        <script>
+            var segundos2 = 0;
+            function actualizarTiempo2(){
+                document.getElementById("cronometro").innerHTML = segundos2+" Segundo";
+                if (segundos2==20){
+                    document.getElementById("cronometro").innerHTML = "termino";
+                }else{
+                    segundos2++;
+                    setTimeout("actualizarTiempo2()",1000);
+                }
+            }
+        </script>
+    </div>
+    <script language='JavaScript' type='text/javascript'>
+        actualizarTiempo();
+    </script>
+    <script language='JavaScript' type='text/javascript'>
+        actualizarTiempo2();
+    </script>
+    <H1>MARCIA KATIUSKA CARPIO ZAMBRANO</H1>
+    </center>
+</body>
+</html>
